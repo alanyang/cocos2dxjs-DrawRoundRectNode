@@ -1,7 +1,7 @@
 cc.DrawNode.prototype.drawRoundRect = function(origin, destination, radius, color, lineWidth, lineColor) {
-    var coef     = 0.5 * Math.PI / segments,
-        vertices = [],
-        segments =  radius* 2;
+    var segments =  radius* 2,
+        coef     = 0.5 * Math.PI / segments,
+        vertices = [];
     for(var i = 0; i <= segments; ++i) {
         var rads = (segments - i)*coef;
         vertices.push(cc.p(radius*Math.sin(rads), radius*Math.cos(rads)));
